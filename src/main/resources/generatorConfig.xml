@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!-- <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" /> -->
+
+  <context id="DB2Tables" targetRuntime="com.lgb.MybatisGenerator.IntrospectedTableMyBatis3Impl" defaultModelType="flat">
+    <commentGenerator type="com.lgb.MybatisGenerator.MyCommentGenerator"> 
+		<!-- <property name="suppressAllComments" value="true" /> --> 
+	</commentGenerator> 
+
+    <!-- 数据库连接 -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://47.106.33.132:3306/love_go_buy?characterEncoding=UTF-8"
+        userId="root"
+        password="i-yoyo">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+	<!-- model文件位置 -->
+    <javaModelGenerator targetPackage="com.lgb.admin.app.model" targetProject="target">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+	<!-- xml文件位置 -->
+    <sqlMapGenerator targetPackage="mapperxml"  targetProject="target">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+	<!-- DAO文件位置 -->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.lgb.admin.app.mapper" targetProject="target">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <!--SYS系统-->
+    <table tableName="sys_user_role" domainObjectName="UserRole" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="sys_user" domainObjectName="SysUser" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="sys_role_menu" domainObjectName="RoleMenu" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="sys_role" domainObjectName="Role" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="sys_menu" domainObjectName="Menu" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="sys_function" domainObjectName="Function" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+
+    <!--CRM系统-->
+    <table tableName="crm_activate_state" domainObjectName="ActivateState" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="crm_user" domainObjectName="User" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="crm_user_info" domainObjectName="UserInfo" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+
+    <!--DL系统-->
+    <table tableName="dl_commodity" domainObjectName="Commodity" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="dl_commodity_transaction" domainObjectName="CommodityTransaction" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="dl_commodity_type" domainObjectName="CommodityType" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+
+  </context>
+</generatorConfiguration>
