@@ -23,7 +23,7 @@ public class IntrospectedTableMyBatis3Impl extends org.mybatis.generator.codegen
     protected String calculateMyBatis3XmlMapperFileName() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.fullyQualifiedTable.getDomainObjectName());
-        sb.append("_SqlMap.xml");
+        sb.append("_SqlMapper.xml");
         return sb.toString();
     }
 

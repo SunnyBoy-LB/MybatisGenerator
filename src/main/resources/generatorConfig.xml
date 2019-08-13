@@ -22,21 +22,21 @@
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 	<!-- model文件位置 -->
-    <javaModelGenerator targetPackage="com.lgb.admin.app.model" targetProject="target">
+    <javaModelGenerator targetPackage="com.lgb.front.db.model" targetProject="target">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 	<!-- xml文件位置 -->
-    <sqlMapGenerator targetPackage="mapperxml"  targetProject="target">
+    <sqlMapGenerator targetPackage="mapper"  targetProject="target">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 	<!-- DAO文件位置 -->
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.lgb.admin.app.mapper" targetProject="target">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.lgb.front.db.mapper" targetProject="target">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
     <!--SYS系统-->
-    <table tableName="sys_user_role" domainObjectName="UserRole" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+    <!--<table tableName="sys_user_role" domainObjectName="UserRole" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
       <property name="useActualColumnNames" value="false"/>
     </table>
     <table tableName="sys_user" domainObjectName="SysUser" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
@@ -53,10 +53,10 @@
     </table>
     <table tableName="sys_function" domainObjectName="Function" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
       <property name="useActualColumnNames" value="false"/>
-    </table>
+    </table>-->
 
     <!--CRM系统-->
-    <table tableName="crm_activate_state" domainObjectName="ActivateState" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+    <!--<table tableName="crm_activate_state" domainObjectName="ActivateState" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
       <property name="useActualColumnNames" value="false"/>
     </table>
     <table tableName="crm_user" domainObjectName="User" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
@@ -64,7 +64,7 @@
     </table>
     <table tableName="crm_user_info" domainObjectName="UserInfo" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
       <property name="useActualColumnNames" value="false"/>
-    </table>
+    </table>-->
 
     <!--DL系统-->
     <table tableName="dl_commodity" domainObjectName="Commodity" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
@@ -76,6 +76,14 @@
     <table tableName="dl_commodity_type" domainObjectName="CommodityType" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
       <property name="useActualColumnNames" value="false"/>
     </table>
+    <table tableName="dl_commodity_status" domainObjectName="CommodityStatus" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="dl_commodity_update_log" domainObjectName="CommodityUpdateLog" enableSelectByExample="false" enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" >
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+
+
 
   </context>
 </generatorConfiguration>
