@@ -13,9 +13,9 @@
 
     <!-- 数据库连接 -->
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-        connectionURL="jdbc:mysql://47.106.33.132:3306/love_go_buy?characterEncoding=UTF-8"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/love_go_buy?characterEncoding=UTF-8"
         userId="root"
-        password="i-yoyo">
+        password="root">
     </jdbcConnection>
 
     <javaTypeResolver >
